@@ -1,4 +1,4 @@
-package com.example.Project.demo.Blogging;
+package com.GoKloud.Project.demo.Blogging;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
