@@ -1,4 +1,4 @@
-package com.example.Project.demo.Blogging;
+package com.GoKloud.Project.Blogging;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

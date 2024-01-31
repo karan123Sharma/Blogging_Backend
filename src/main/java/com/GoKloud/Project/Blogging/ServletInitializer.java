@@ -1,4 +1,4 @@
-package com.example.Project.demo.Blogging;
+package com.GoKloud.Project.Blogging;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
