@@ -30,3 +30,4 @@ public class UpdateController {
 		return blgservice.updateBlog(blogobj, blog_id);
 	}
 }
+

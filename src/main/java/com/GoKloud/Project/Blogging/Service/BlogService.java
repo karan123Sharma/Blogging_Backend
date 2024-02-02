@@ -31,8 +31,6 @@ public class BlogService {
 		return temp;
 	}
 	
-	
-	
 	public List<Blog> getAllBlogs(){
 		List<Blog>allBlogs = blogrep.findAll();
 		return allBlogs;
@@ -47,6 +45,9 @@ public class BlogService {
 		}
 		return null;
 	}
+//	
+//	@PutMapping("newtask/{userid}")
+//	public Blog updateBlog(@RequestBody Blog blogobj , @PathVariable("userid") int task_id) {
 	
 	public String deleteBlog(int blog_id) {
 		blogrep.deleteById(blog_id);
