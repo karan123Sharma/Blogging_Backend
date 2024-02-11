@@ -3,6 +3,8 @@ package com.GoKloud.Project.Blogging.Model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,7 +23,7 @@ public class User {
     private Long id;
 
     @Column(name ="username")
-    private String username;
+    private String userName;
     
     @Column(name ="password")
     private String password;
@@ -39,12 +41,12 @@ public class User {
 	}
 
 	public String getUsername() {
-		return username;
+		return userName;
 	}
 
 	public void setUsername(String username) {
 		
-		this.username = username;
+		this.userName = username;
 	}
 
 	public String getPassword() {
@@ -71,6 +73,8 @@ public class User {
 	public void setBlogs(List<Blog> blogs) {
 		this.blogs = blogs;
 	}
+	
+	@JsonManagedReference
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="author_id")
     private List<Blog> blogs;

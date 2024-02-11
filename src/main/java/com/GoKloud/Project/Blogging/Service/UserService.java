@@ -3,6 +3,8 @@ package com.GoKloud.Project.Blogging.Service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,18 +21,23 @@ public class UserService {
 	//user services here
 	
 	public String authenticateUser(User user) {
-		Optional<User> opUser = userepo.findById(user.getId());
+		System.out.println("Hello");
+		Optional<User> opUser = userepo.findByUserName(user.getUsername());
+		System.out.println(opUser);
+		
 		if(opUser.isPresent()) {
 			User dbuser = opUser.get();
+			System.out.println(dbuser.getPassword());
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			if(passwordEncoder.matches(user.getPassword(), dbuser.getPassword())) {
+				System.out.println("Password Matched");
 				return "Authenticated User";
 			}
 			else {
-				return "Incorrect Password"; 
+				return "Incorrect Password";
 			}	
 		}
-		return "not found";		
-	}
+		return "Not Found";
+		}
 
 }

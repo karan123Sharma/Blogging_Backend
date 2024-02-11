@@ -2,6 +2,8 @@ package com.GoKloud.Project.Blogging.Model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,10 +25,10 @@ public class Blog {
 	
 	@Column(name= "Title")
 	private String blogTitle;
-	@Column(name= "Content")
+	@Column(name = "Content", columnDefinition = "TEXT")
 	private String blogContent;
 	@Column(name= "Date")
-	private LocalDateTime blogDate;
+	private String blogDate;
 	
 	public Long getBlogId() {
 		return blogId;
@@ -52,11 +54,11 @@ public class Blog {
 		this.blogContent = blogContent;
 	}
 
-	public LocalDateTime getBlogDate() {
+	public String getBlogDate() {
 		return blogDate;
 	}
 
-	public void setBlogDate(LocalDateTime blogDate) {
+	public void setBlogDate(String blogDate) {
 		this.blogDate = blogDate;
 	}
 
@@ -70,5 +72,18 @@ public class Blog {
 	
 	@Column(name="views")
 	private Long blogViews;
+	
+	@JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private User author;
+
+	public User getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(User author) {
+		this.author = author;
+	}
 	
 }

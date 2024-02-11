@@ -1,6 +1,8 @@
 package com.GoKloud.Project.Blogging.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import com.GoKloud.Project.Blogging.Service.BlogService;
 
 @RestController
 @RequestMapping("/blogs")
+@CrossOrigin("http://localhost:4200")
 public class DeleteController {
 	
 	
@@ -23,8 +26,8 @@ public class DeleteController {
 	BlogService blgservice;
 	
 	
-	@PostMapping("/delete/{id}")
-	public String deleteBlogById(@PathVariable("id") int blog_id) {
+	@DeleteMapping("/delete/{id}")
+	public String deleteBlogById(@PathVariable("id") Long blog_id) {
 		return blgservice.deleteBlog(blog_id);
 	}	
 }

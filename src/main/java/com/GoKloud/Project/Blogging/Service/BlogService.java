@@ -21,7 +21,7 @@ public class BlogService {
 	// Here Services will be included 
 	
 	
-	public Blog getBlogsById(int blog_id) {
+	public Blog getBlogsById(Long blog_id) {
 		Blog temp = null;
 		Optional<Blog> bobj = blogrep.findById(blog_id);
 		if(bobj != null) {
@@ -37,7 +37,7 @@ public class BlogService {
 	}
 	
 	
-	public Blog updateBlog(Blog blogobj ,int blog_id) {
+	public Blog updateBlog(Blog blogobj ,Long blog_id) {
 		Optional<Blog> mobj = blogrep.findById(blog_id);
 		if(mobj != null) {	
 			blogobj.setBlogId((long)blog_id);
@@ -45,11 +45,8 @@ public class BlogService {
 		}
 		return null;
 	}
-//	
-//	@PutMapping("newtask/{userid}")
-//	public Blog updateBlog(@RequestBody Blog blogobj , @PathVariable("userid") int task_id) {
-	
-	public String deleteBlog(int blog_id) {
+
+	public String deleteBlog(Long blog_id) {
 		blogrep.deleteById(blog_id);
 		return "Done";
 	}	
