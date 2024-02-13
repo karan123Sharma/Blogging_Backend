@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Controller;
+package com.GoKloud.Project.Blogging.controller;
 
 import java.util.Optional;
 
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.GoKloud.Project.Blogging.Model.Blog;
-import com.GoKloud.Project.Blogging.Model.BlogCreationData;
-import com.GoKloud.Project.Blogging.Model.BlogUpdateData;
-import com.GoKloud.Project.Blogging.Model.User;
-import com.GoKloud.Project.Blogging.Repository.BlogRepository;
-import com.GoKloud.Project.Blogging.Repository.UserRepository;
-import com.GoKloud.Project.Blogging.Service.BlogService;
+import com.GoKloud.Project.Blogging.model.Blog;
+import com.GoKloud.Project.Blogging.model.BlogCreationData;
+import com.GoKloud.Project.Blogging.model.BlogUpdateData;
+import com.GoKloud.Project.Blogging.model.User;
+import com.GoKloud.Project.Blogging.repository.BlogRepository;
+import com.GoKloud.Project.Blogging.repository.UserRepository;
+import com.GoKloud.Project.Blogging.service.BlogService;
 
 
 @RestController

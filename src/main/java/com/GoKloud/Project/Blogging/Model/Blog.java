@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Model;
+package com.GoKloud.Project.Blogging.model;
 
 import java.time.LocalDateTime;
 

@@ -1,10 +1,10 @@
-package com.GoKloud.Project.Blogging.Repository;
+package com.GoKloud.Project.Blogging.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.GoKloud.Project.Blogging.Model.Blog;
+import com.GoKloud.Project.Blogging.model.Blog;
 
 public interface BlogRepository extends JpaRepository<Blog,Long>{
 	

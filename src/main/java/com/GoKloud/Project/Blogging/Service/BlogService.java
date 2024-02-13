@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Service;
+package com.GoKloud.Project.Blogging.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.GoKloud.Project.Blogging.Model.Blog;
-import com.GoKloud.Project.Blogging.Repository.BlogRepository;
+import com.GoKloud.Project.Blogging.model.Blog;
+import com.GoKloud.Project.Blogging.repository.BlogRepository;
 
 
 @Service

@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Controller;
+package com.GoKloud.Project.Blogging.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.GoKloud.Project.Blogging.Repository.BlogRepository;
-import com.GoKloud.Project.Blogging.Service.BlogService;
+import com.GoKloud.Project.Blogging.repository.BlogRepository;
+import com.GoKloud.Project.Blogging.service.BlogService;
 
 
 

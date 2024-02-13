@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Service;
+package com.GoKloud.Project.Blogging.service;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.GoKloud.Project.Blogging.Model.User;
-import com.GoKloud.Project.Blogging.Repository.UserRepository;
+import com.GoKloud.Project.Blogging.model.User;
+import com.GoKloud.Project.Blogging.repository.UserRepository;
 
 @Service
 public class UserService {

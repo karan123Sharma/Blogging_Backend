@@ -1,4 +1,4 @@
-package com.GoKloud.Project.Blogging.Model;
+package com.GoKloud.Project.Blogging.model;
 
 public class BlogUpdateData {
     private Blog blog;
